@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --background: 210 29% 97%;
+    --foreground: 224 39% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 39% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 39% 11%;
+    --primary: 172 82% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 224 39% 11%;
+    --muted: 210 24% 92%;
+    --muted-foreground: 222 18% 38%;
+    --accent: 210 30% 95%;
+    --accent-foreground: 224 39% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 18% 86%;
+    --input: 214 18% 86%;
+    --ring: 172 82% 27%;
+    --radius: 0.9rem;
+}
+
+.dark {
+    --background: 224 33% 7%;
+    --foreground: 210 40% 98%;
+    --card: 224 28% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 28% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 172 82% 27%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 221 27% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 26% 15%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 220 24% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 24% 21%;
+    --input: 220 24% 21%;
+    --ring: 172 82% 27%;
+}
+
+* {
+    @apply border-border;
+}
+
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at 10% -10%, rgba(12, 124, 109, 0.16), transparent 30%), radial-gradient(circle at 90% -20%, rgba(34, 211, 238, 0.08), transparent 30%), linear-gradient(180deg, #f3f6fa 0%, #e8eef5 100%);
+    min-height: 100vh;
+}
+
+.dark body {
+    background-image: radial-gradient(circle at 10% -10%, rgba(12, 124, 109, 0.2), transparent 30%), radial-gradient(circle at 90% -20%, rgba(34, 211, 238, 0.1), transparent 30%), linear-gradient(180deg, #040712 0%, #0b1221 100%);
+}
+
+::selection {
+    background: rgba(12, 124, 109, 0.25);
+    color: #f8fafc;
+}
